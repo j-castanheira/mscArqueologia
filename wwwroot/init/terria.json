@@ -1,16 +1,106 @@
 {
   "homeCamera": {
-    "north": -8,
-    "east": 158,
-    "south": -45,
-    "west": 109
+    "west":-79.24513315514591,"south":-21.235899126362227,"east":31.821452924507163,"north":30.603932114177002,
+    "position": {
+      "x":18673363.896494318,"y":-8201636.506077089,"z":2720318.489464542
+    },
+    "direction": {
+      "x":-0.9075809867223087,"y":0.3986239112664959,"z":-0.1318928728429308
+    },
+    "up": {
+      "x":-0.1207584120637634,"y":0.053039002843189166,"z":0.9912639759888576
+    }
   },
   "catalog": [
+
     {
-      "name": "Example Datasets",
+      "name": "Europeana Examples Datasets",
       "type": "group",
       "preserveOrder": true,
       "isOpen": true,
+      "items": [
+        {
+          "name": "3D Examples Datasets",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": []
+        },
+        {
+          "name": "Austria Monuments",
+          "type": "object-csv",
+          "url": "test/austriaEuropeana.csv",
+
+          "featureInfoTemplate": {
+            "template": "<div class='abc'><small>{{Date}}</small>{{#Images}}<figure><img src='{{Images}}'/><figcaption>{{Description}}</figcaption></figure>{{/Images}}<p><a target='_blank' href={{SourcePage}}>Original page</a></div>"
+          },
+          "tableStyle": {
+            "timeColumn": null,
+            "dataVariable": "Title",
+            "colorMap": [
+              {
+                "color": "rgba(0,0,200,1.0)",
+                "offset": 0
+              },
+              {
+                "color": "rgba(200,200,200,1.00)",
+                "offset": 0.6
+              },
+              {
+                "color": "rgba(200,0,0,1.00)",
+                "offset": 1
+              }
+            ]
+          },
+          "zoomOnEnable": true
+        },
+        {
+          "name": "Newgrange Search",
+          "type": "object-csv",
+          "url": "test/newgrangeEuropeana.csv",
+          "featureInfoTemplate": {
+            "template": "<div class='abc'><small>{{Date}}</small>{{#Images}}<figure><img src='{{Images}}'/><figcaption>{{Description}}</figcaption></figure>{{/Images}}<p><a target='_blank' href={{SourcePage}}>Original page</a></div>"
+          },
+          "tableStyle": {
+            "dataVariable": "Title",
+            "colorBins": [2000, 2500, 3200, 3350, 3800, 3850, 3900, 5000, 8000],
+            "colorMap": "black-red"
+          },
+          "zoomOnEnable": true
+        },
+        {
+          "name": "Lisbon Platform Search",
+          "type": "csv",
+          "url": "test/lisbon.csv",
+          "featureInfoTemplate": {
+            "template": "<div class='abc'><small>{{Date}}</small>{{#Primary image}}<figure><img src='{{Primary image}}'/><figcaption>{{Primary image caption}}</figcaption></figure>{{/Primary image}}<p><a target='_blank' href={{URL}}>Read More</a></div>"
+          },
+          "tableStyle": {
+            "dataVariable": "dcTitle",
+            "colorMap": "green-orange"
+          },
+          "zoomOnEnable": true
+        },
+        {
+          "name": "Europeana Search",
+          "type": "cho-json",
+          "url": "https://www.europeana.eu/api/v2/search.json?wskey=MmvpGKssS",
+          "inputs": [
+            {
+              "id": "query",
+              "type": "string",
+              "name": "Search terms",
+              "description": "Use any terms to find objects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Terria Example Datasets",
+      "type": "group",
+      "preserveOrder": true,
+      "isOpen": false,
       "items": [
         {
           "name": "ABC News Stories",
@@ -48,7 +138,7 @@
           "type": "group",
           "items": [
             {
-              "name": "Smooth Geelong Buildings glTF Mini Demo",
+              "name": "Smooth Geelong Buildings GLTF Mini Demo",
               "description": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using data made available from the [City of Greater Geelong](mailto:gis@geelongcity.vic.gov.au) under a Creative Commons license. The data used to create this demo was originally obtained via email in .skp format (> 100MB so not suitable for inclusion in this repo), however there is also a lower quality dataset of the same region available on data.gov.au in .kml/.dae format (this dataset does not seem to contain building textures).\n\nSee [readme.txt](test/3d/geelong/readme.txt) for more information.",
               "attribution": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using a dataset obtained from the City of Greater Geelong. The original dataset is licensed under the CC BY 3.0 AU.",
               "type": "czml",
@@ -57,11 +147,11 @@
                 144.354,
                 -38.147,
                 144.358,
-                -38.150
+                -38.15
               ]
             },
             {
-              "name": "Terrain Geelong Buildings glTF Mini Demo",
+              "name": "Terrain Geelong Buildings GLTF Mini Demo",
               "description": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using data made available from the [City of Greater Geelong](mailto:gis@geelongcity.vic.gov.au) under a Creative Commons license. The data used to create this demo was originally obtained via email in .skp format (> 100MB so not suitable for inclusion in this repo), however there is also a lower quality dataset of the same region available on data.gov.au in .kml/.dae format (this dataset does not seem to contain building textures).\n\nSee [readme.txt](test/3d/geelong/readme.txt) for more information.",
               "attribution": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using a dataset obtained from the City of Greater Geelong. The original dataset is licensed under the CC BY 3.0 AU.",
               "type": "czml",
@@ -70,46 +160,7 @@
                 144.354,
                 -38.147,
                 144.358,
-                -38.150
-              ]
-            }
-          ]
-        },
-        {
-          "name": "aero3Dpro",
-          "type": "group",
-          "description": "Aero3Dpro is an Australian 3D mapping service for the generation of geographically accurate, fully textured and high resolution 3D models of natural and urban environments.\n\nIt is an end-to-end service based on aerial photogrammetry techniques including flight planning, image acquisition, 3D processing, geo-registration and final delivery.\n\nAero3Dpro models can be provided as stand-alone data for use in common 3D rendering and CAD software or as 3D GIS-ready products.\n\nhttp://aero3dpro.com.au/",
-          "items": [
-            {
-              "name": "Brisbane 3D city model (aero3Dpro)",
-              "type": "3d-tiles",
-              "description": "Aero3Dpro is an Australian 3D mapping service for the generation of geographically accurate, fully textured and high resolution 3D models of natural and urban environments.\n\nIt is an end-to-end service based on aerial photogrammetry techniques including flight planning, image acquisition, 3D processing, geo-registration and final delivery.\n\nAero3Dpro models can be provided as stand-alone data for use in common 3D rendering and CAD software or as 3D GIS-ready products.\n\nhttp://aero3dpro.com.au/",
-              "url": "https://sample.aero3dpro.com.au/BrisbaneCBD/Scene/recon_h_3DTiles.json",
-              "options": {
-                "maximumScreenSpaceError": 1,
-                "maximumNumberOfLoadedTiles": 1000
-              },
-              "rectangle": [
-                153.01,
-                -27.484,
-                153.034,
-                -27.46
-              ]
-            },
-            {
-              "name": "Melbourne 3D city model (aero3Dpro)",
-              "type": "3d-tiles",
-              "description": "Aero3Dpro is an Australian 3D mapping service for the generation of geographically accurate, fully textured and high resolution 3D models of natural and urban environments.\n\nIt is an end-to-end service based on aerial photogrammetry techniques including flight planning, image acquisition, 3D processing, geo-registration and final delivery.\n\nAero3Dpro models can be provided as stand-alone data for use in common 3D rendering and CAD software or as 3D GIS-ready products.\n\nhttp://aero3dpro.com.au/",
-              "url": "https://sample.aero3dpro.com.au/Melbourne/Scene/recon_h_3DTiles.json",
-              "options": {
-                  "maximumScreenSpaceError": 1,
-                  "maximumNumberOfLoadedTiles": 1000
-              },
-              "rectangle": [
-                144.868,
-                -37.885,
-                145.018,
-                -37.775
+                -38.15
               ]
             }
           ]
@@ -286,7 +337,7 @@
           "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
           "rectangle": [
             112.93529,
-            -38.20880,
+            -38.2088,
             152.06206,
             -11.05104
           ],
@@ -301,5 +352,6 @@
         }
       ]
     }
+
   ]
 }
