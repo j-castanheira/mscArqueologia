@@ -36,21 +36,18 @@
           },
           "tableStyle": {
             "timeColumn": null,
-            "dataVariable": "Title",
-            "colorMap": [
+            "dataVariable": null,
+            "colorMap": "red",
+            "columns":{
+              "Title":
               {
-                "color": "rgba(0,0,200,1.0)",
-                "offset": 0
+                "colorMap": "white"
               },
+              "Creator":
               {
-                "color": "rgba(200,200,200,1.00)",
-                "offset": 0.6
-              },
-              {
-                "color": "rgba(200,0,0,1.00)",
-                "offset": 1
+                "colorMap": "blue"
               }
-            ]
+            }
           },
           "zoomOnEnable": true
         },
