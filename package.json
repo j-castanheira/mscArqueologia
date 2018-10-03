@@ -15,9 +15,7 @@
     "type": "git",
     "url": "http://github.com/TerriaJS/TerriaMap"
   },
-  "dependencies": {
-    "loader-runner": "^2.3.1"
-  },
+  "dependencies": {},
   "config": {
     "awsProfile": "terria",
     "awsS3PackagesPath": "s3://terria-apps/map",
