@@ -80,11 +80,24 @@
         },
         {
           "name": "Europeana Search",
-          "type": "cho-json",
+          "type": "europeana-json",
           "url": "https://www.europeana.eu/api/v2/search.json?wskey=MmvpGKssS",
           "inputs": [
             {
               "id": "query",
+              "type": "string",
+              "name": "Search terms",
+              "description": "Use any terms to find objects."
+            }
+          ]
+        },
+        {
+          "name": "Repository Search",
+          "type": "cho-json",
+          "url": "http://10.170.138.201:9200/rest/searchByTerm?ignoreExtraProperties=true&disableRelation=true&disableCombine=true",
+          "inputs": [
+            {
+              "id": "term",
               "type": "string",
               "name": "Search terms",
               "description": "Use any terms to find objects."

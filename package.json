@@ -15,7 +15,9 @@
     "type": "git",
     "url": "http://github.com/TerriaJS/TerriaMap"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-responsive": "^5.0.0"
+  },
   "config": {
     "awsProfile": "terria",
     "awsS3PackagesPath": "s3://terria-apps/map",

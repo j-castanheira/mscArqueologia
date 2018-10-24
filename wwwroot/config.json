@@ -4,7 +4,7 @@
         "terria"
     ],
     parameters: {
-        bingMapsKey: "AkaOmRFtjAb71cXgLwAGtLbj2RpkPKtVqAIroFQsocfurCBILxIeAWPkil7hhRy_",
+        bingMapsKey: "AjtSzJ1BJHqwg3BMEw0E90x1_usMQb49skTm50g37JnCLjQpDzgKlCn2RmC__XdE",
         googleUrlShortenerKey: null,
         googleAnalyticsKey: null,
         googleAnalyticsOptions: null,
@@ -31,7 +31,7 @@
             // The text of that is in lib/Views/DevelopmentDisclaimerPreamble.html
             //prodHostRegex: "gov.\\.au$",
             //devHostRegex: "\\b(staging|preview|test|dev)\\.",
-            enableOnLocalhost: true // If false, don't show this when running on localhost
+            enableOnLocalhost: false // If false, don't show this when running on localhost
         },
         
         /*

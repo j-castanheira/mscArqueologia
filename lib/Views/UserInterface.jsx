@@ -1,5 +1,6 @@
 import { Menu, Nav, ExperimentalMenu } from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups';
 import MeasureTool from 'terriajs/lib/ReactViews/Map/Navigation/MeasureTool';
+import UploadButton from 'terriajs/lib/ReactViews/Map/Navigation/UploadButton';
 import MenuItem from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/MenuItem';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -30,6 +31,7 @@ export default function UserInterface(props) {
             </Menu>
             <Nav>
                 <MeasureTool terria={props.viewState.terria} key="measure-tool"/>
+                <UploadButton terria={props.viewState.terria} key="upload-button"/>
             </Nav>
             <ExperimentalMenu>
                 <If condition={isBrowserSupportedAV()}>
